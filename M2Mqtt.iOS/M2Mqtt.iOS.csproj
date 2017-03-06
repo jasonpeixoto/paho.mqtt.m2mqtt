@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{33A675F4-507E-45D3-87FE-FD77E9C30B40}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>M2Mqtt.iOS</RootNamespace>
+    <AssemblyName>M2Mqtt.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchProfiling>true</MtouchProfiling>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <IOSDebuggerPort>36587</IOSDebuggerPort>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+    <MtouchLink></MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+    <MtouchTlsProvider></MtouchTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <DefineConstants></DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchUseSGen>true</MtouchUseSGen>
+    <MtouchUseRefCounting>true</MtouchUseRefCounting>
+    <MtouchLink>SdkOnly</MtouchLink>
+    <MtouchHttpClientHandler></MtouchHttpClientHandler>
+    <MtouchTlsProvider></MtouchTlsProvider>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\M2Mqtt\Exceptions\MqttClientException.cs">
+      <Link>Exceptions\MqttClientException.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Exceptions\MqttCommunicationException.cs">
+      <Link>Exceptions\MqttCommunicationException.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Exceptions\MqttConnectionException.cs">
+      <Link>Exceptions\MqttConnectionException.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Exceptions\MqttTimeoutException.cs">
+      <Link>Exceptions\MqttTimeoutException.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Internal\InternalEvent.cs">
+      <Link>Internal\InternalEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Internal\MsgInternalEvent.cs">
+      <Link>Internal\MsgInternalEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Internal\MsgPublishedInternalEvent.cs">
+      <Link>Internal\MsgPublishedInternalEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgBase.cs">
+      <Link>Messages\MqttMsgBase.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgConnack.cs">
+      <Link>Messages\MqttMsgConnack.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgConnect.cs">
+      <Link>Messages\MqttMsgConnect.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgConnectEventArgs.cs">
+      <Link>Messages\MqttMsgConnectEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgContext.cs">
+      <Link>Messages\MqttMsgContext.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgDisconnect.cs">
+      <Link>Messages\MqttMsgDisconnect.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPingReq.cs">
+      <Link>Messages\MqttMsgPingReq.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPingResp.cs">
+      <Link>Messages\MqttMsgPingResp.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPuback.cs">
+      <Link>Messages\MqttMsgPuback.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPubcomp.cs">
+      <Link>Messages\MqttMsgPubcomp.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPublish.cs">
+      <Link>Messages\MqttMsgPublish.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPublishEventArgs.cs">
+      <Link>Messages\MqttMsgPublishEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPublishedEventArgs.cs">
+      <Link>Messages\MqttMsgPublishedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPubrec.cs">
+      <Link>Messages\MqttMsgPubrec.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPubrel.cs">
+      <Link>Messages\MqttMsgPubrel.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgSuback.cs">
+      <Link>Messages\MqttMsgSuback.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgSubscribe.cs">
+      <Link>Messages\MqttMsgSubscribe.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgSubscribeEventArgs.cs">
+      <Link>Messages\MqttMsgSubscribeEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgSubscribedEventArgs.cs">
+      <Link>Messages\MqttMsgSubscribedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgUnsuback.cs">
+      <Link>Messages\MqttMsgUnsuback.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgUnsubscribe.cs">
+      <Link>Messages\MqttMsgUnsubscribe.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgUnsubscribeEventArgs.cs">
+      <Link>Messages\MqttMsgUnsubscribeEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgUnsubscribedEventArgs.cs">
+      <Link>Messages\MqttMsgUnsubscribedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Net\Fx.cs">
+      <Link>Net\Fx.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Net\MqttNetworkChannel.cs">
+      <Link>Net\MqttNetworkChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Session\MqttBrokerSession.cs">
+      <Link>Session\MqttBrokerSession.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Session\MqttClientSession.cs">
+      <Link>Session\MqttClientSession.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Session\MqttSession.cs">
+      <Link>Session\MqttSession.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Utility\QueueExtension.cs">
+      <Link>Utility\QueueExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Utility\Trace.cs">
+      <Link>Utility\Trace.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\IMqttNetworkChannel.cs">
+      <Link>IMqttNetworkChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\MqttClient.cs">
+      <Link>MqttClient.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\MqttSecurity.cs">
+      <Link>MqttSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\MqttSettings.cs">
+      <Link>MqttSettings.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

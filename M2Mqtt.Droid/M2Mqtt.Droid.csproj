@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{391D4E4C-0ED3-4B10-89CD-89C4AF3A17BB}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>M2Mqtt.Droid</RootNamespace>
+    <AssemblyName>M2Mqtt.Droid</AssemblyName>
+    <TargetFrameworkVersion>v7.1</TargetFrameworkVersion>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseLatestPlatformSdk>true</AndroidUseLatestPlatformSdk>
+    <AndroidTlsProvider></AndroidTlsProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidSupportedAbis>arm64-v8a;armeabi;armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Mono.Android" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="..\M2Mqtt\Exceptions\MqttClientException.cs">
+      <Link>Exceptions\MqttClientException.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Exceptions\MqttCommunicationException.cs">
+      <Link>Exceptions\MqttCommunicationException.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Exceptions\MqttConnectionException.cs">
+      <Link>Exceptions\MqttConnectionException.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Exceptions\MqttTimeoutException.cs">
+      <Link>Exceptions\MqttTimeoutException.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Internal\InternalEvent.cs">
+      <Link>Internal\InternalEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Internal\MsgInternalEvent.cs">
+      <Link>Internal\MsgInternalEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Internal\MsgPublishedInternalEvent.cs">
+      <Link>Internal\MsgPublishedInternalEvent.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgBase.cs">
+      <Link>Messages\MqttMsgBase.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgConnack.cs">
+      <Link>Messages\MqttMsgConnack.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgConnect.cs">
+      <Link>Messages\MqttMsgConnect.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgConnectEventArgs.cs">
+      <Link>Messages\MqttMsgConnectEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgContext.cs">
+      <Link>Messages\MqttMsgContext.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgDisconnect.cs">
+      <Link>Messages\MqttMsgDisconnect.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPingReq.cs">
+      <Link>Messages\MqttMsgPingReq.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPingResp.cs">
+      <Link>Messages\MqttMsgPingResp.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPuback.cs">
+      <Link>Messages\MqttMsgPuback.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPubcomp.cs">
+      <Link>Messages\MqttMsgPubcomp.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPublish.cs">
+      <Link>Messages\MqttMsgPublish.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPublishEventArgs.cs">
+      <Link>Messages\MqttMsgPublishEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPublishedEventArgs.cs">
+      <Link>Messages\MqttMsgPublishedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPubrec.cs">
+      <Link>Messages\MqttMsgPubrec.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgPubrel.cs">
+      <Link>Messages\MqttMsgPubrel.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgSuback.cs">
+      <Link>Messages\MqttMsgSuback.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgSubscribe.cs">
+      <Link>Messages\MqttMsgSubscribe.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgSubscribeEventArgs.cs">
+      <Link>Messages\MqttMsgSubscribeEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgSubscribedEventArgs.cs">
+      <Link>Messages\MqttMsgSubscribedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgUnsuback.cs">
+      <Link>Messages\MqttMsgUnsuback.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgUnsubscribe.cs">
+      <Link>Messages\MqttMsgUnsubscribe.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgUnsubscribeEventArgs.cs">
+      <Link>Messages\MqttMsgUnsubscribeEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Messages\MqttMsgUnsubscribedEventArgs.cs">
+      <Link>Messages\MqttMsgUnsubscribedEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Net\Fx.cs">
+      <Link>Net\Fx.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Net\MqttNetworkChannel.cs">
+      <Link>Net\MqttNetworkChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Session\MqttBrokerSession.cs">
+      <Link>Session\MqttBrokerSession.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Session\MqttClientSession.cs">
+      <Link>Session\MqttClientSession.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Session\MqttSession.cs">
+      <Link>Session\MqttSession.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Utility\QueueExtension.cs">
+      <Link>Utility\QueueExtension.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\Utility\Trace.cs">
+      <Link>Utility\Trace.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\IMqttNetworkChannel.cs">
+      <Link>IMqttNetworkChannel.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\MqttClient.cs">
+      <Link>MqttClient.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\MqttSecurity.cs">
+      <Link>MqttSecurity.cs</Link>
+    </Compile>
+    <Compile Include="..\M2Mqtt\MqttSettings.cs">
+      <Link>MqttSettings.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AboutResources.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\Strings.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>
