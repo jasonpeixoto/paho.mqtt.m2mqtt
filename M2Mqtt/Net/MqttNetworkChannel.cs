@@ -31,6 +31,8 @@ using System.Net;
 using System.Security.Cryptography.X509Certificates;
 using System;
 using System.Diagnostics;
+using System.Security.Authentication;
+using System.Net.Security;
 
 namespace uPLibrary.Networking.M2Mqtt
 {
