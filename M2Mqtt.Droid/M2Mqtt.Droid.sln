@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "M2Mqtt.Droid", "M2Mqtt.Droid.csproj", "{391D4E4C-0ED3-4B10-89CD-89C4AF3A17BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{391D4E4C-0ED3-4B10-89CD-89C4AF3A17BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{391D4E4C-0ED3-4B10-89CD-89C4AF3A17BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{391D4E4C-0ED3-4B10-89CD-89C4AF3A17BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{391D4E4C-0ED3-4B10-89CD-89C4AF3A17BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
